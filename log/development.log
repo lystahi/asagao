@@ -8319,3 +8319,377 @@ Processing by TopController#index as HTML
 Completed 200 OK in 98ms (Views: 88.7ms | ActiveRecord: 2.1ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateActiveStorageTables (20180914124537)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20180914124537_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180914124537"]]
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2018-09-14 21:56:25 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TopController#index as HTML
+  [1m[36mMember Load (1.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:25.272076') AND (expired_at > '2018-09-14 12:56:25.272076' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/top/index.html.erb:1
+  Rendered top/index.html.erb within layouts/application (20.2ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (10.0ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (12.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:25.688656') AND (expired_at > '2018-09-14 12:56:25.688656' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (1.6ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (96.8ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 540ms (Views: 456.3ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-09-14 21:56:36 +0900
+Processing by ArticlesController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:36.517755') AND (expired_at > '2018-09-14 12:56:36.517755' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE (released_at <= '2018-09-14 12:56:36.517755') AND (expired_at > '2018-09-14 12:56:36.517755' OR expired_at IS NULL)[0m
+  ↳ app/views/articles/index.html.erb:29
+  Rendered articles/index.html.erb within layouts/application (367.0ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (6.2ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:37.037073') AND (expired_at > '2018-09-14 12:56:37.037073' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mCACHE Member Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (1.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (1.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (35.6ms)
+  Rendered shared/_footer.html.erb (2.1ms)
+Completed 200 OK in 568ms (Views: 549.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/entries" for 127.0.0.1 at 2018-09-14 21:56:37 +0900
+Processing by EntriesController#index as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering entries/index.html.erb within layouts/application
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  ↳ app/views/entries/index.html.erb:8
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/entries/_footer.html.erb:4
+  Rendered entries/_footer.html.erb (16.3ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/entries/_footer.html.erb:4
+  Rendered entries/_footer.html.erb (5.9ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/entries/_footer.html.erb:4
+  Rendered entries/_footer.html.erb (6.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries" WHERE (member_id = 2 OR status <> 'draft')[0m
+  ↳ app/views/entries/index.html.erb:15
+  Rendered entries/index.html.erb within layouts/application (135.5ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (5.4ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:38.113148') AND (expired_at > '2018-09-14 12:56:38.113148' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (0.7ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (36.4ms)
+  Rendered shared/_footer.html.erb (1.5ms)
+Completed 200 OK in 263ms (Views: 248.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/members" for 127.0.0.1 at 2018-09-14 21:56:39 +0900
+Processing by MembersController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (6.9ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY number LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/members/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  ↳ app/views/members/index.html.erb:36
+  Rendered members/index.html.erb within layouts/application (85.5ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (5.9ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:39.394987') AND (expired_at > '2018-09-14 12:56:39.394987' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (24.2ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 195ms (Views: 176.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/members/2/edit" for 127.0.0.1 at 2018-09-14 21:56:47 +0900
+Processing by MembersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:30
+  Rendering members/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.0ms)
+  Rendered shared/_member_form.html.erb (151.0ms)
+  Rendered members/edit.html.erb within layouts/application (158.3ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (5.4ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:56:47.614282') AND (expired_at > '2018-09-14 12:56:47.614282' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (61.4ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 315ms (Views: 304.0ms | ActiveRecord: 5.4ms)
+
+
+Started PATCH "/members/2" for 127.0.0.1 at 2018-09-14 21:57:27 +0900
+Processing by MembersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k3oEyzcHg33RLP7sKLxlZoTtJCQp2i/AXQKv8D6IplCpbH9zISwcXmZWEYvyRaSclPJJ14xjzmQXo1+r88S2yA==", "member"=>{"new_profile_picture"=>#<ActionDispatch::Http::UploadedFile:0x00007faabd81c0f8 @tempfile=#<Tempfile:/var/folders/46/81wbrlbs573f5lqt2l4ytr1w0000gn/T/RackMultipart20180914-23230-aoo0y8.png>, @original_filename="eto_remake_tora.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"member[new_profile_picture]\"; filename=\"eto_remake_tora.png\"\r\nContent-Type: image/png\r\n">, "number"=>"11", "name"=>"Jiro", "full_name"=>"鈴木 次郎", "sex"=>"1", "birthday(1i)"=>"1981", "birthday(2i)"=>"12", "birthday(3i)"=>"1", "email"=>"Jiro@example.com"}, "commit"=>"更新する", "id"=>"2"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:45
+Unpermitted parameter: :sex
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:47
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE "members"."number" = ? AND "members"."id" != ? LIMIT ?[0m  [["number", 11], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:47
+  [1m[36mMember Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE LOWER("members"."name") = LOWER(?) AND "members"."id" != ? LIMIT ?[0m  [["name", "Jiro"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:47
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Member"], ["name", "profile_picture"], ["LIMIT", 1]]
+  ↳ app/models/member.rb:32
+[36m  Disk Storage (3.9ms) [0m[32mUploaded file to key: PRfjh4bWnFuFWxRC3Rp4XyEA (checksum: y/cI00YwOTweTv8LWJ4oBQ==)[0m
+  [1m[36mActiveStorage::Blob Create (1.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "PRfjh4bWnFuFWxRC3Rp4XyEA"], ["filename", "eto_remake_tora.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 83610], ["checksum", "y/cI00YwOTweTv8LWJ4oBQ=="], ["created_at", "2018-09-14 12:57:27.938584"]]
+  ↳ app/models/member.rb:32
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "profile_picture"], ["record_type", "Member"], ["record_id", 2], ["blob_id", 1], ["created_at", "2018-09-14 12:57:27.954440"]]
+  ↳ app/models/member.rb:32
+  [1m[36mMember Update (0.3ms)[0m  [1m[33mUPDATE "members" SET "updated_at" = ? WHERE "members"."id" = ?[0m  [["updated_at", "2018-09-14 12:57:27.956340"], ["id", 2]]
+  ↳ app/controllers/members_controller.rb:47
+  [1m[36mMember Update (0.1ms)[0m  [1m[33mUPDATE "members" SET "updated_at" = ? WHERE "members"."id" = ?[0m  [["updated_at", "2018-09-14 12:57:27.956125"], ["id", 2]]
+  ↳ app/controllers/members_controller.rb:47
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/members_controller.rb:47
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 61de2c7e-2b09-45ac-a534-b6d28480f710) to Async(default) with arguments: #<GlobalID:0x00007faabe858a20 @uri=#<URI::GID gid://asagao/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/members/2
+Completed 302 Found in 220ms (ActiveRecord: 6.9ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/members/2" for 127.0.0.1 at 2018-09-14 21:57:28 +0900
+  ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710] Performing ActiveStorage::AnalyzeJob (Job ID: 61de2c7e-2b09-45ac-a534-b6d28480f710) from Async(default) with arguments: #<GlobalID:0x00007faabe1af430 @uri=#<URI::GID gid://asagao/ActiveStorage::Blob/1>>
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710] [36m  Disk Storage (30.5ms) [0m[34mDownloaded file from key: PRfjh4bWnFuFWxRC3Rp4XyEA[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:20
+  Rendering members/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Member"], ["name", "profile_picture"], ["LIMIT", 1]]
+  ↳ app/views/members/_body.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/members/_body.html.erb:5
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":400,\"height\":335,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710]   ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [61de2c7e-2b09-45ac-a534-b6d28480f710] Performed ActiveStorage::AnalyzeJob (Job ID: 61de2c7e-2b09-45ac-a534-b6d28480f710) from Async(default) in 168.52ms
+  Rendered members/_body.html.erb (119.0ms)
+  Rendered members/show.html.erb within layouts/application (127.8ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendered shared/_header.html.erb (18.9ms)
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE (released_at <= '2018-09-14 12:57:28.293659') AND (expired_at > '2018-09-14 12:57:28.293659' OR expired_at IS NULL) ORDER BY "articles"."released_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:9
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mEntry Load (1.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE (member_id = 2 OR status <> 'draft') ORDER BY "entries"."posted_at" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/shared/_sidebar.html.erb:20
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_sidebar.html.erb:23
+  Rendered shared/_sidebar.html.erb (26.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 259ms (Views: 243.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5829d7b3329148a66e7c24db330b6fbd69d9a825/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRJNGVERXlPQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b512493ecc5ba32c4539f05d3398a41ced115dab/eto_remake_tora.png" for 127.0.0.1 at 2018-09-14 21:57:28 +0900
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5829d7b3329148a66e7c24db330b6fbd69d9a825", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRJNGVERXlPQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--b512493ecc5ba32c4539f05d3398a41ced115dab", "filename"=>"eto_remake_tora"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/taiga/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/PRfjh4bWnFuFWxRC3Rp4XyEA/950d3138a8dcd883bc6014ac564c9d729d71c2966d34deb7b87fea08cb471c4b (no)[0m
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: PRfjh4bWnFuFWxRC3Rp4XyEA[0m
+[36m  Disk Storage (4.3ms) [0m[32mUploaded file to key: variants/PRfjh4bWnFuFWxRC3Rp4XyEA/950d3138a8dcd883bc6014ac564c9d729d71c2966d34deb7b87fea08cb471c4b[0m
+[36m  Disk Storage (3.8ms) [0m[34mGenerated URL for file at key: variants/PRfjh4bWnFuFWxRC3Rp4XyEA/950d3138a8dcd883bc6014ac564c9d729d71c2966d34deb7b87fea08cb471c4b (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRVW1acWFEUmlWMjVHZFVaWGVGSkRNMUp3TkZoNVJVRXZPVFV3WkRNeE16aGhPR1JqWkRnNE0ySmpOakF4TkdGak5UWTBZemxrTnpJNVpEY3hZekk1Tmpaa016UmtaV0kzWWpnM1ptVmhNRGhqWWpRM01XTTBZZ1k2QmtWVSIsImV4cCI6IjIwMTgtMDktMTRUMTM6MDI6MjguNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--a4c5a48e3b048cf1a8e5d7753ea01cad44cce721/eto_remake_tora.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22eto_remake_tora.png%22%3B+filename%2A%3DUTF-8%27%27eto_remake_tora.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRVW1acWFEUmlWMjVHZFVaWGVGSkRNMUp3TkZoNVJVRXZPVFV3WkRNeE16aGhPR1JqWkRnNE0ySmpOakF4TkdGak5UWTBZemxrTnpJNVpEY3hZekk1Tmpaa016UmtaV0kzWWpnM1ptVmhNRGhqWWpRM01XTTBZZ1k2QmtWVSIsImV4cCI6IjIwMTgtMDktMTRUMTM6MDI6MjguNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--a4c5a48e3b048cf1a8e5d7753ea01cad44cce721/eto_remake_tora.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22eto_remake_tora.png%22%3B+filename%2A%3DUTF-8%27%27eto_remake_tora.png
+Completed 302 Found in 176ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRVW1acWFEUmlWMjVHZFVaWGVGSkRNMUp3TkZoNVJVRXZPVFV3WkRNeE16aGhPR1JqWkRnNE0ySmpOakF4TkdGak5UWTBZemxrTnpJNVpEY3hZekk1Tmpaa016UmtaV0kzWWpnM1ptVmhNRGhqWWpRM01XTTBZZ1k2QmtWVSIsImV4cCI6IjIwMTgtMDktMTRUMTM6MDI6MjguNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--a4c5a48e3b048cf1a8e5d7753ea01cad44cce721/eto_remake_tora.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22eto_remake_tora.png%22%3B+filename%2A%3DUTF-8%27%27eto_remake_tora.png" for 127.0.0.1 at 2018-09-14 21:57:28 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"eto_remake_tora.png\"; filename*=UTF-8''eto_remake_tora.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlRVW1acWFEUmlWMjVHZFVaWGVGSkRNMUp3TkZoNVJVRXZPVFV3WkRNeE16aGhPR1JqWkRnNE0ySmpOakF4TkdGak5UWTBZemxrTnpJNVpEY3hZekk1Tmpaa016UmtaV0kzWWpnM1ptVmhNRGhqWWpRM01XTTBZZ1k2QmtWVSIsImV4cCI6IjIwMTgtMDktMTRUMTM6MDI6MjguNTczWiIsInB1ciI6ImJsb2Jfa2V5In19--a4c5a48e3b048cf1a8e5d7753ea01cad44cce721", "filename"=>"eto_remake_tora"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: variants/PRfjh4bWnFuFWxRC3Rp4XyEA/950d3138a8dcd883bc6014ac564c9d729d71c2966d34deb7b87fea08cb471c4b[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
